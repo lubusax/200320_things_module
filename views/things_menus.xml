@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Menus  -->
+    <menuitem
+        id="things_menu_root" 
+        name="IoT"
+    />
+    
+    <act_window
+        id="things_gate_action" 
+        name="Gates"
+        res_model="things.gate"
+        view_mode = "tree,form"
+    />
+    
+    <menuitem
+        id="things_menu_gate"
+        name="Gates"
+        action="things_gate_action" 
+        parent="things_menu_root"
+    />
+
+    <act_window
+        id="things_thing_action" 
+        name="Dings"
+        res_model="things.thing"
+        view_mode = "tree,form"
+    />
+
+    <!-- <act_window id='things_thing_action' model='ir.actions.act_window'>
+        <field name="name">Dings</field>
+        <field name="res_model">things.thing</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record> -->
+
+    <menuitem
+        id="things_menu_thing"
+        name="Things"
+        action="things_thing_action"
+        parent="things_menu_root"
+    />
+
+</odoo>

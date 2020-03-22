@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Action that opens the views -->
-    <record id='things_gate_action' model='ir.actions.act_window'>
-        <field name="name">Gates</field>
-        <field name="res_model">things.gate</field>
-        <field name="view_type">form</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-    <!-- Menus  -->
-    <menuitem   name="IoT-Things" id="things_base_menu" />
-    
-    <menuitem   name="Gates" id="things_gate_menu"
-                parent="things_base_menu" action="things_gate_action"/>
-
     <!-- Custom Form View  -->
     <record id="things_gate_view_form" model="ir.ui.view">
         <field name="name">Gate Form</field>

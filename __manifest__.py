@@ -11,7 +11,10 @@
 'data': [
     'security/groups.xml',
     'security/ir.model.access.csv',
-    'views/things_gate.xml'
+    'views/things_menus.xml',
+    'views/things_gate.xml',
+    'views/things_thing.xml',
+
     ],
 # 'demo': ['demo.xml'],
 }
