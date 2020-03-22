@@ -2,23 +2,21 @@
 <odoo>
 
     <!-- Action that opens the views -->
-    <record id='things_gate_action' model='ir.actions.act_window'>
-        <field name="name">Gates</field>
-        <field name="res_model">things.gate</field>
+    <record id='things_thing_action' model='ir.actions.act_window'>
+        <field name="name">Things</field>
+        <field name="res_model">things.thing</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- Menus  -->
-    <menuitem   name="IoT-Things" id="things_base_menu" />
-    
-    <menuitem   name="Gates" id="things_gate_menu"
-                parent="things_base_menu" action="things_gate_action"/>
+    <menuitem   name="Things" id="things_thing_menu"
+                parent="things_base_menu" action="things_thing_action"/>
 
     <!-- Custom Form View  -->
-    <record id="things_gate_view_form" model="ir.ui.view">
-        <field name="name">Gate Form</field>
-        <field name="model">things.gate</field>
+    <record id="things_thing_view_form" model="ir.ui.view">
+        <field name="name">Thing Form</field>
+        <field name="model">things.thing</field>
         <field name="arch" type="xml">
             <form>
                 <group>
@@ -35,27 +33,25 @@
     </record>
 
     <!-- Custom Tree (=List) View  -->
-    <record id="things_gate_view_tree" model="ir.ui.view">
-        <field name="name">Gate List</field>
-        <field name="model">things.gate</field>
+    <record id="things_thing_view_tree" model="ir.ui.view">
+        <field name="name">Thing List</field>
+        <field name="model">things.thing</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="location"/>
-                <field name="route_to_gate"/>
-                <field name="route_from_gate"/>
+                <field name="route_to_thing"/>
+                <field name="route_from_thing"/>
             </tree>
         </field>
     </record>
 
     <!-- Custom Search Options  -->
-    <record id="things_gate_view_search" model="ir.ui.view">
-        <field name="name">Gate Search</field>
-        <field name="model">things.gate</field>
+    <record id="things_thing_view_search" model="ir.ui.view">
+        <field name="name">Thing Search</field>
+        <field name="model">things.thing</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name"/>
-                <field name="location"/>
             </search>
         </field>
     </record>

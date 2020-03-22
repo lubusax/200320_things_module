@@ -19,9 +19,22 @@ class ThingsGate(models.Model):
         readonly = True
         )
     route_from_gate =fields.Char(
-        'route for incoming data from the gate to the database')
-    
+        string = 'route from gate',
+        help = 'route for incoming data from the gate to the database',
+        default = lambda self: (
+            str(fields.Datetime.now())+str(uuid4())).
+            replace(" ","").
+            replace(":","").
+            replace("-","") ,
+        store = True,
+        compute_sudo = False,
+        readonly = True
+        )
+
+    # @api.multi    
     # def _compute_route_to_gate(self):
     #     self.ensure_one()
-    #     self.route_to_gate = str(self.id.hex)+str(uuid.uuid4().hex) 
-
+    #     route = str(fields.Datetime.now()) + str(uuid4())
+    #     self.route_to_gate = route.replace(" ","").
+    #             replace(":","").
+    #             replace("-","") 
