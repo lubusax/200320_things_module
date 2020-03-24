@@ -14,6 +14,9 @@
                     </group>
                     <group>
                         <field name="location"/>
+                        <!-- <button name="_generate_route_to_gate"
+                                string="Generate Route to Gate"
+                                type="object"/> -->
                     </group>
                 </group>
             </form>
@@ -28,8 +31,8 @@
             <tree>
                 <field name="name"/>
                 <field name="location"/>
-                <field name="route_to_gate"/>
-                <field name="route_from_gate"/>
+                <field name="route_to"/>
+                <field name="route_from"/>
             </tree>
         </field>
     </record>

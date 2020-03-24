@@ -10,11 +10,12 @@
                 <group>
                     <group>
                         <field name="name"/>
-    
+                        <field name="location"/>
                     </group>
                     <group>
-                        <field name="route_to_thing"/>
-                        <field name="route_from_thing"/>
+                        <field name="gate_id"
+                               widget="many2one" />
+
                     </group>
                 </group>
             </form>
@@ -28,8 +29,8 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="route_to_thing"/>
-                <field name="route_from_thing"/>
+                <field name="route_to"/>
+                <field name="route_from"/>
             </tree>
         </field>
     </record>
