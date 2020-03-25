@@ -41,7 +41,7 @@ class BaseThing(models.AbstractModel):
         )
         
     route_from =fields.Char(
-        string = 'route from gate',
+        string = 'route from thing/gate',
         help = 'route for incoming data from the thing/gate to the database',
         default = generate_route_from,
         store = True,

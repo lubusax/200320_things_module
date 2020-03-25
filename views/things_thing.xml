@@ -2,19 +2,19 @@
 <odoo>
 
     <!-- Custom Form View  -->
-    <record id="things_thing_view_form" model="ir.ui.view">
+    <record id="base_thing_view_form" model="ir.ui.view">
         <field name="name">Thing Form</field>
-        <field name="model">things.thing</field>
+        <field name="model">base.thing</field>
         <field name="arch" type="xml">
             <form>
                 <group>
                     <group>
                         <field name="name"/>
-                        <field name="location"/>
                     </group>
                     <group>
-                        <field name="gate_id"
-                               widget="many2one" />
+                        <field name="location"/>
+                        <!-- <field name="gate_id"
+                               widget="many2one" /> -->
 
                     </group>
                 </group>
@@ -25,7 +25,7 @@
     <!-- Custom Tree (=List) View  -->
     <record id="things_thing_view_tree" model="ir.ui.view">
         <field name="name">Thing List</field>
-        <field name="model">things.thing</field>
+        <field name="model">base.thing</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
@@ -38,7 +38,7 @@
     <!-- Custom Search Options  -->
     <record id="things_thing_view_search" model="ir.ui.view">
         <field name="name">Thing Search</field>
-        <field name="model">things.thing</field>
+        <field name="model">base.thing</field>
         <field name="arch" type="xml">
             <search>
                 <field name="name"/>

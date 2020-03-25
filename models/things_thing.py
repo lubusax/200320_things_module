@@ -1,7 +1,7 @@
 from odoo import models, fields
 
 class ThingsThing(models.Model):
-    _name = 'things.thing'
+    _name = 'things.thing.dummy'
     _inherit = ['base.thing']
 
     # every thing sends and/or receives data
@@ -13,5 +13,5 @@ class ThingsThing(models.Model):
 class ThingsGate(models.Model):
     _inherit = 'things.gate'
 
-    thing_ids = fields.One2many('things.thing',
+    thing_ids = fields.One2many('things.thing.dummy',
         'gate_id', string='Things attached')

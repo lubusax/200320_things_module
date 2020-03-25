@@ -24,7 +24,7 @@
     <act_window
         id="things_thing_action" 
         name="Things"
-        res_model="things.thing"
+        res_model="base.thing"
         view_mode = "tree,form"
     />
 
