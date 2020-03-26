@@ -1,6 +1,6 @@
 from odoo import models, fields
 
-class BaseData(models.AbstractModel):
-    _name = 'base.data'
+class ThingsData(models.AbstractModel):
+    _name = 'things.data'
     
     name = fields.Char('Name')

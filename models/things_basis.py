@@ -1,8 +1,8 @@
 from odoo import models, fields
 from uuid import uuid4
 
-class BaseThing(models.AbstractModel):
-    _name = 'base.thing'
+class ThingsBasis(models.AbstractModel):
+    _name = 'things.basis'
     
     name = fields.Char('Name')
     location = fields.Char('Location')

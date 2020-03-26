@@ -2,5 +2,5 @@ from odoo import models, fields
 
 class ThingsGate(models.Model):
     _name = 'things.gate'
-    _inherit = ['base.thing']
+    _inherit = ['things.basis']
  

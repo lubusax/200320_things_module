@@ -21,18 +21,4 @@
         parent="things_menu_root"
     />
 
-    <act_window
-        id="things_thing_action" 
-        name="Things"
-        res_model="base.thing"
-        view_mode = "tree,form"
-    />
-
-    <menuitem
-        id="things_menu_thing"
-        name="Things"
-        action="things_thing_action"
-        parent="things_menu_root"
-    />
-
 </odoo>
