@@ -8,34 +8,17 @@ class ThingsBasis(models.AbstractModel):
     name = fields.Char('Name')
     location = fields.Char('Location')
     
-    _sql_constraints = [ (  'route_to_uniq',
-                            'UNIQUE (route_to)',
-                            'Route to thing/gate must be unique.'),
-                         (  'route_from_uniq',
-                            'UNIQUE (route_from)',
-                            'Route from thing/gate must be unique.'),
-                          (  'name_uniq',
+    _sql_constraints = [ (  'name_uniq',
                             'UNIQUE (name)',
-                            'Name must be unique.')
-                                ]
+                            'Name must be unique.') ]
 
     def generate_route(self):
-        result = str(fields.Datetime.now())+str(uuid4())
-        result = result.replace(" ","").replace(":","").replace("-","")
-        return result
-
-    def generate_route_to(self):
-        result = 'TO'+ self.generate_route()
-        return result
-
-    def generate_route_from(self):
-        result = 'FROM'+ self.generate_route()
-        return result
+        return self.env['things.route'].create({}).route
 
     route_to =fields.Char(
         string = 'route to thing/gate',
         help = 'route for outgoing data from the database to the thing/gate',
-        default = generate_route_to,
+        default = generate_route,
         store = True,
         compute_sudo = False,
         readonly = True
@@ -44,7 +27,7 @@ class ThingsBasis(models.AbstractModel):
     route_from =fields.Char(
         string = 'route from thing/gate',
         help = 'route for incoming data from the thing/gate to the database',
-        default = generate_route_from,
+        default = generate_route,
         store = True,
         compute_sudo = False,
         readonly = True

@@ -6,7 +6,7 @@ class ThingsGate(models.Model):
 
     registrationConfirmed = fields.Boolean(
         string='Registration Confirmed?',
-        help='User confirmed the Registration of the new Gate',
+        help='Has the User confirmed the Registration of the new Gate?',
         default = False)
 
 

@@ -8,6 +8,12 @@ class GateConfirmWizard(models.TransientModel):
     name = fields.Char(string='Gate Name')
     location = fields.Char(string='Gate Location')
 
+    can_receive = fields.Boolean(
+        'can process/needs data from the database', default = True)
+
+    can_send = fields.Boolean(
+        'can send data to the database', default = True)
+
     def confirm_new_gate(self):
         self.ensure_one()
         gate = self.env['things.gate'].sudo().search(
@@ -17,6 +23,8 @@ class GateConfirmWizard(models.TransientModel):
                 'registrationConfirmed' : True,
                 'name' : self.name,
                 'location' : self.location,
+                'can_receive' : self.can_receive,
+                'can_send' : self.can_send
                 })
         else:
             raise UserError('There is no Gate '

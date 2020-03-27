@@ -11,9 +11,11 @@
                 <sheet>
                     <group>
                         <field name='name'/>
+                        <field name='location'/>
                     </group>
                     <group>
-                        <field name='location'/>
+                        <field name="can_receive"/>
+                        <field name="can_send"/>                       
                     </group>
                 </sheet>
                 <footer>
