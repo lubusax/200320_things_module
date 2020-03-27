@@ -14,9 +14,9 @@
                     </group>
                     <group>
                         <field name="location"/>
-                        <!-- <button name="_generate_route_to_gate"
-                                string="Generate Route to Gate"
-                                type="object"/> -->
+                        <button name="confirm_new_gate_registration"
+                                string="Confirm New Gate"
+                                type="object"/>
                     </group>
                 </group>
             </form>
@@ -29,6 +29,7 @@
         <field name="model">things.gate</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="registrationConfirmed"/>
                 <field name="name"/>
                 <field name="location"/>
                 <field name="route_to"/>

@@ -3,7 +3,8 @@ from uuid import uuid4
 
 class ThingsBasis(models.AbstractModel):
     _name = 'things.basis'
-    
+    _description = 'description'
+
     name = fields.Char('Name')
     location = fields.Char('Location')
     
