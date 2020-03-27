@@ -10,10 +10,9 @@
             <form string="Confirm New Gate">
                 <sheet>
                     <group>
-                        <field name='gate_id'/>
+                        <field name='name'/>
                     </group>
                     <group>
-                        <field name='name'/>
                         <field name='location'/>
                     </group>
                 </sheet>
