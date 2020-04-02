@@ -9,14 +9,10 @@
         <field name='arch' type='xml'>
             <form string="Confirm New Gate">
                 <sheet>
-                    <group>
+                    <!-- <group>
                         <field name='name'/>
                         <field name='location'/>
-                    </group>
-                    <group>
-                        <field name="can_receive"/>
-                        <field name="can_send"/>                       
-                    </group>
+                    </group> -->
                 </sheet>
                 <footer>
                     <button string='Confirm'

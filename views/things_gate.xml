@@ -27,7 +27,7 @@
         <field name="model">things.gate</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="registrationConfirmed"/>
+                <field name="confirmed"/>
                 <field name="name"/>
                 <field name="location"/>
                 <field name="route_to"/>

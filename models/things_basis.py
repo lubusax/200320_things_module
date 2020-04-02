@@ -7,6 +7,9 @@ class ThingsBasis(models.AbstractModel):
 
     name = fields.Char('Name')
     location = fields.Char('Location')
+    confirmed = fields.Boolean(
+        'Has the Gate/Thing been confirmed?',
+        default = False)
     
     _sql_constraints = [ (  'name_uniq',
                             'UNIQUE (name)',
@@ -34,7 +37,9 @@ class ThingsBasis(models.AbstractModel):
         )
 
     can_receive = fields.Boolean(
-        'can process/needs data from the database', default = True)
+        'can process/needs data from the database',
+        default = True)
 
     can_send = fields.Boolean(
-        'can send data to the database', default = True)
+        'can send data to the database',
+        default = True)

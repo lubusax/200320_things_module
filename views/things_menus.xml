@@ -21,9 +21,9 @@
         parent="things_menu_root"
     />
 
-    <act_window
+    <act_window 
         id="action_wizard_gate_confirm"
-        name="Confirm Gate"
+        name="Confirm New Gate"
         res_model="gate.confirm.wizard"
         view_mode="form" target="new" />
     
