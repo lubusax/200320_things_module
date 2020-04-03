@@ -44,9 +44,16 @@ class ThingsGate(http.Controller):
         GatesModel = http.request.env['things.gate']
         gateSending = GatesModel.sudo().search(
             [('route_from', '=', routeFrom)])
-        if gateSending:
-            gateSendingDict = gateSending.sudo().read()[0]
-            print('gateSendingDict is ', gateSendingDict)
+        # gateSendingDict={}
+        # if gateSending:
+        #     gateSendingDict = gateSending.sudo().read()[0]
+        #     print('gateSendingDict is ', gateSendingDict)
         
-        print (' This is Original - something came from', routeFrom)
-        return gateSending
+        # print (' This is Original - something came from', routeFrom)
+        # gateSendingDict.update({'thing type created':'none'})
+        if gateSending:
+            response = {'route known': 'true'}
+        else:
+            response = {'route known': 'false'}
+        response.update({'thing type created':'none'})
+        return response
