@@ -8,7 +8,7 @@ class ThingsBasis(models.AbstractModel):
     name = fields.Char('Name')
     location = fields.Char('Location')
     confirmed = fields.Boolean(
-        'Has the Gate/Thing been confirmed?',
+        'Confirmed?',
         default = False)
     
     _sql_constraints = [ (  'name_uniq',
