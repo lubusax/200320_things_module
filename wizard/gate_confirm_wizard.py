@@ -13,6 +13,8 @@ class GateConfirmWizard(models.TransientModel):
             gate.write({
                 'confirmed' : True,
                 })
+            action =  gate.get_formview_action()
+            return action
         else:
             raise UserError('There is no Gate '
                             'awaiting to be confirmed')
