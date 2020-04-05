@@ -42,14 +42,17 @@ class ThingsGate(http.Controller):
             auth ='public', csrf=False)    
     def messageFromGate(self, routeFrom, **kwargs):
         GatesModel = http.request.env['things.gate']
-
+        response = {
+            'gate route known'  :   'false',
+            'type created'      :   'none',
+            'route from'        :   'none',
+            'route to'          :   'none',
+            'error'             :   'none'
+        }
         
         gateSending = GatesModel.sudo().search(
             [('route_from', '=', routeFrom)])
         if gateSending:
-            response = {'route known': 'true'}
-        else:
-            response = {'route known': 'false'}
+            response = {'gate route known': 'true'}
             
-        response.update({'thing type created':'none'})
         return response
