@@ -4,4 +4,4 @@ class ThingsData(models.AbstractModel):
     _name = 'things.data'
     _description = 'description'
     
-    name = fields.Char('Name')
+    name = fields.Char('Data Stream Name')
