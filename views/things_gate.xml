@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Custom Form View  -->
+    <!-- Custom Form View
+    
+    <form string="Gate">
+    
+     -->
     <record id="things_gate_view_form" model="ir.ui.view">
         <field name="name">Gate Form</field>
         <field name="model">things.gate</field>
         <field name="arch" type="xml">
-            <form>
+        <form>
+            <group>
                 <group>
-                    <group>
-                        <field name="name"/>
-                        <field name="location"/>
-                    </group>
-                    <group>
-                        <field name="can_receive"/>
-                        <field name="can_send"/>                       
-                    </group>
+                    <field name="name"/>
+                    <field name="location"/>
                 </group>
-            </form>
+                <group>
+                    <field name="can_receive"/>
+                    <field name="can_send"/>                       
+                </group>
+            </group>
+        </form>
         </field>
     </record>
 
